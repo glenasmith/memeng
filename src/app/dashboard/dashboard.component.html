@@ -1,0 +1,10 @@
+
+<ul>
+  <li *ngFor="let template of templates">
+    <figure (click)="onSelect(template)">
+      <img class="meme-dashboard" src="{{template.url}}" title="{{template.name}}"/>
+      <figcaption>{{template.name | uppercase }}</figcaption>
+    </figure>
+
+  </li>
+</ul>

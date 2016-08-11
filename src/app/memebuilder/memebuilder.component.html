@@ -1,0 +1,16 @@
+
+<div *ngIf="memeTemplate">
+
+  <figure>
+    <img id="memeEditor" src="{{memeTemplate.url}}" title="{{memeTemplate.name}}"  />
+    <canvas #memeCanvas width="300" height="300"></canvas>
+    <figcaption>{{memeTemplate.name | uppercase }}</figcaption>
+  </figure>
+
+  <p><input [(ngModel)]="topCaption"/></p>
+  <p><input [(ngModel)]="bottomCaption"/></p>
+  <button (click)="onPreview()">Preview</button>
+  <button (click)="onCancel()">Cancel</button>
+
+
+</div>

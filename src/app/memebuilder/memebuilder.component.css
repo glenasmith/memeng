@@ -1,0 +1,13 @@
+
+#memeEditor {
+   display: none;
+}
+
+canvas {
+  width: 400px;
+  height: 400px;
+}
+
+input {
+  width: 20em;
+}
