@@ -7,8 +7,7 @@ import { MemeBuilderComponent } from './memebuilder.component';
 
 describe('Component: Memebuilder', () => {
   it('should create an instance', () => {
-    let component = new MemeBuilderComponent(null, null, null
-    );
+    let component = new MemeBuilderComponent(null, null, null);
     expect(component).toBeTruthy();
   });
 });

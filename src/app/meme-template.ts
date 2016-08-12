@@ -5,6 +5,6 @@
 export class MemeTemplate {
 
   constructor(public id: number, public name: string, public url: string,
-              public defaultTopText: string = "", public bottomBottomText : string = "") { }
+              public defaultTopText: string = "", public defaultBottomText : string = "") { }
 
 }

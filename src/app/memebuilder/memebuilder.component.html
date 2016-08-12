@@ -2,10 +2,11 @@
 <div *ngIf="memeTemplate">
 
   <figure>
-    <img id="memeEditor" src="{{memeTemplate.url}}" title="{{memeTemplate.name}}"  />
-    <canvas #memeCanvas width="300" height="300"></canvas>
+    <img id="memeEditor" src="{{memeTemplate.url}}" title="{{memeTemplate.name}}" [style.hideMe]="preview"  />
     <figcaption>{{memeTemplate.name | uppercase }}</figcaption>
   </figure>
+
+  <canvas id="memeCanvas" #memeCanvas></canvas>
 
   <p><input [(ngModel)]="topCaption"/></p>
   <p><input [(ngModel)]="bottomCaption"/></p>

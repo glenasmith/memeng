@@ -9,10 +9,12 @@
  **********************************************************************************************/
 /** Map relative paths to URLs. */
 const map: any = {
+  'fabric' : 'js/fabric.min.js'
 };
 
 /** User packages configuration. */
 const packages: any = {
+  'fabric': { format: 'global' }
 };
 
 ////////////////////////////////////////////////////////////////////////////////////////////////

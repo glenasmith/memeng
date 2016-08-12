@@ -1,11 +1,12 @@
 
-#memeEditor {
+#hideMe {
    display: none;
 }
 
 canvas {
   width: 400px;
   height: 400px;
+  background: red;
 }
 
 input {
