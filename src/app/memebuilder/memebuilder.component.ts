@@ -30,7 +30,6 @@ export class MemeBuilderComponent implements OnInit {
         this.memeTemplate = this.memeTemplateService.getMemeTemplateById(id);
         this.topCaption = this.memeTemplate.defaultTopText;
         this.bottomCaption = this.memeTemplate.defaultBottomText;
-
       } catch (e) {
         console.log("Error locating Meme by id " + id + "  " + e);
       }

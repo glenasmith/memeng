@@ -1,17 +1,26 @@
 
 <div *ngIf="memeTemplate">
 
-  <figure>
-    <img id="memeEditor" src="{{memeTemplate.url}}" title="{{memeTemplate.name}}" [style.hideMe]="preview"  />
-    <figcaption>{{memeTemplate.name | uppercase }}</figcaption>
-  </figure>
+  <md-card>
 
-  <canvas id="memeCanvas" #memeCanvas></canvas>
+    <img md-card-image id="memeEditor" src="{{memeTemplate.url}}" [style.hideMe]="preview"  />
 
-  <p><input [(ngModel)]="topCaption"/></p>
-  <p><input [(ngModel)]="bottomCaption"/></p>
-  <button (click)="onPreview()">Preview</button>
-  <button (click)="onCancel()">Cancel</button>
+    <md-card-title >{{memeTemplate.name}}</md-card-title>
 
+    <md-card-content class="secondary">
+      <canvas id="memeCanvas" #memeCanvas></canvas>
+
+        <input required [(ngModel)]="topCaption" type="text"/>
+        <input required [(ngModel)]="bottomCaption" type="text"/>
+
+    </md-card-content>
+
+
+    <md-card-actions align="end">
+      <button md-button color="primary" (click)="onPreview()">Preview</button>
+      <button md-button color="primary"(click)="onCancel()">Cancel</button>
+    </md-card-actions>
+
+  </md-card>
 
 </div>
