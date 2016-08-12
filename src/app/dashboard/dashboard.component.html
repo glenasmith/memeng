@@ -1,5 +1,14 @@
 
-<ul>
+<div class="card-container">
+  <md-card *ngFor="let template of templates">
+    <img md-card-image [alt]="template.name" src="{{template.url}}">
+    <md-card-title>{{template.name}}</md-card-title>
+    <md-card-actions align="end">
+      <button md-button color="primary" (click)="onSelect(template)">Create</button>
+    </md-card-actions>
+  </md-card>
+</div>
+<!--
   <li *ngFor="let template of templates">
     <figure (click)="onSelect(template)">
       <img class="meme-dashboard" src="{{template.url}}" title="{{template.name}}"/>
@@ -8,3 +17,4 @@
 
   </li>
 </ul>
+-->

@@ -30,6 +30,7 @@ export class MemeBuilderComponent implements OnInit {
         this.memeTemplate = this.memeTemplateService.getMemeTemplateById(id);
         this.topCaption = this.memeTemplate.defaultTopText;
         this.bottomCaption = this.memeTemplate.defaultBottomText;
+        this.onPreview();
       } catch (e) {
         console.log("Error locating Meme by id " + id + "  " + e);
       }
@@ -41,9 +42,6 @@ export class MemeBuilderComponent implements OnInit {
 
     console.log("Preview firing...");
     this.preview = true;
-
-    let context : CanvasRenderingContext2D = this.memeCanvas.nativeElement.getContext("2d");
-    let image : HTMLImageElement = document.getElementById("memeEditor") as HTMLImageElement;
 
     var fCanvas = new Canvas('memeCanvas');
 
