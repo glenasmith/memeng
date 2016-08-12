@@ -7,7 +7,7 @@ import { DashboardComponent } from './dashboard.component';
 
 describe('Component: Dashboard', () => {
   it('should create an instance', () => {
-    let component = new DashboardComponent(null);
+    let component = new DashboardComponent(null,null);
     expect(component).toBeTruthy();
   });
 });
